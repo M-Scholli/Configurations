@@ -1669,8 +1669,8 @@
  *
  * Override the default value based on the driver type set in Configuration.h.
  */
-//#define MINIMUM_STEPPER_POST_DIR_DELAY 650
-//#define MINIMUM_STEPPER_PRE_DIR_DELAY 650
+//#define MINIMUM_STEPPER_POST_DIR_DELAY 20
+//#define MINIMUM_STEPPER_PRE_DIR_DELAY 20
 
 /**
  * Minimum stepper driver pulse width (in µs)
@@ -1683,7 +1683,7 @@
  *
  * Override the default value based on the driver type set in Configuration.h.
  */
-//#define MINIMUM_STEPPER_PULSE 2
+//#define MINIMUM_STEPPER_PULSE 0
 
 /**
  * Maximum stepping rate (in Hz) the stepper driver allows
@@ -1697,8 +1697,7 @@
  *
  * Override the default value based on the driver type set in Configuration.h.
  */
-//#define MAXIMUM_STEPPER_RATE 250000
-
+//#define MAXIMUM_STEPPER_RATE 5000000
 // @section temperature
 
 // Control heater 0 and heater 1 in parallel.
@@ -2165,14 +2164,14 @@
    * Override default SPI pins for TMC2130, TMC2160, TMC2660, TMC5130 and TMC5160 drivers here.
    * The default pins can be found in your board's pins file.
    */
-  //#define X_CS_PIN          32
-  //#define Y_CS_PIN          47
-  //#define Z_CS_PIN          45
+  #define X_CS_PIN          32
+  #define Y_CS_PIN          47
+  #define Z_CS_PIN          45
   //#define X2_CS_PIN         -1
   //#define Y2_CS_PIN         -1
-  //#define Z2_CS_PIN         39
+  #define Z2_CS_PIN         39
   //#define Z3_CS_PIN         -1
-  //#define E0_CS_PIN         43
+  #define E0_CS_PIN         43
   //#define E1_CS_PIN         -1
   //#define E2_CS_PIN         -1
   //#define E3_CS_PIN         -1
